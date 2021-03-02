@@ -1,0 +1,22 @@
+﻿@page
+@model Ex2DataValid.Pages.Form.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form method="post">
+    <div asp-validation-summary="All" style="color:red"></div>
+    <input asp-for="Person.Name" placeholder="Name" /> </br>
+    <input asp-for="Person.Course" placeholder="Course" /> </br>
+    <input asp-for="Person.YearLevel" placeholder="Year Level" /> </br>
+    <input asp-for="Person.EmailAddress" placeholder="Email Address" /> </br>
+    <input asp-for="Person.Address" placeholder="Address" /> </br>
+    <input asp-for="Person.Age" placeholder="Age" /> </br>
+    <input asp-for="Person.BirthDate" placeholder="Birthday" /> </br>
+
+    <button type="submit">Submit</button>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
